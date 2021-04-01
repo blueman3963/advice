@@ -44,7 +44,6 @@ let goodClouds = [],
 const Main = (props) => {
 
     let audioTimeline = useRef(0)
-    let audioAnchor = useRef(0)
     let audio = useRef()
 
     const gas = useRef(1)
@@ -90,14 +89,12 @@ const Main = (props) => {
         //control
 
         let unitX = 0,
-            unitY = 0,
-            d = 0
+            unitY = 0
 
         let omegaX = 0,
             omegaY = 0,
             vBase = 0.2,
-            v = 0,
-            threshold = 0.05
+            v = 0
 
         //world
 
@@ -507,13 +504,13 @@ const Main = (props) => {
 
     useEffect(() => {
         setInterval(() => {
+
             if(pause.current) return
             let timeline = audioTimeline.current
             audioTimeline.current++
             
             if( audioTimeline.current > 3 && audioTimeline.current <= 4 ) {
                 playAudio(audio_welcome)
-
 
             }
 
@@ -560,7 +557,7 @@ const Main = (props) => {
             }  
 
             if( audioTimeline.current > 77 && audioTimeline.current <= 78 ) {
-                setStep(0)
+                window.location.reload();
             }  
 
         },1000)

@@ -21,6 +21,8 @@ function App() {
         return <Dislikes setStep={setStep} setList={setDislikes} />
       case 3:
         return <Main setStep={setStep} likesList={likes} dislikesList={dislikes}/>
+      default:
+        return
     }
   }
 
