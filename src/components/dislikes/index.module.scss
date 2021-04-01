@@ -1,0 +1,63 @@
+.wrapper {
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    flex-wrap: wrap;
+
+    .intro {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+
+    input {
+        width: 100%;
+        font-size: 48px;
+        margin: 40px 0;
+        border: none;
+        border-bottom: 1px solid #000;
+        text-align: center;
+
+        &:active, &:focus {
+            outline: none;
+        }
+    }
+
+    .btn {
+        margin-top: 40px;
+        padding: 20px 40px;
+        border-radius: 80px;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+
+    .active {
+        background-color: blue;
+        color: white;
+    }
+
+    .tags {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        
+        .tag {
+
+            padding: 4px 10px;
+            background-color: #fdd;
+            margin: 5px;
+ 
+        }
+
+        .remove {
+            
+        }
+    }
+}
